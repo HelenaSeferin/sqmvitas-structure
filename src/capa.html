@@ -1,0 +1,3897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SQM VItas</title>
+
+
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://playground.anychart.com/gallery/Column_Charts/Multi-Series_Column_Chart/iframe" rel="canonical">
+    <meta content="Animation,Bar Chart,Column Chart,Table Data,Tooltip" name="keywords">
+    <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+    
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body id="page-top">
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg top" id="mainNav">
+        <div class="col-xs-3 col-md-1 menu">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span> 
+        </div>
+
+        <div class="top-logo col-xs-9 col-md-11">
+            <a href="#page-top">  <img src="img/logo.png" alt="SQM VITAS BRASIL" class="navbar-brand"></a>  
+        </div>
+    </nav>
+    <!-- FIM NAV -->
+
+    <!-- MENU LATERAL -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- USUÁRIO  MENU -->
+            <div class="col-md-12 user">
+                <div class="col-md-2 user-item">
+                    <div class="top-links">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="col-md-10 user-item">
+                    <b>Leandro Ries</b>
+                </div>  
+            </div>
+            <!-- FIME USUÁRIO MENU -->
+            
+            <!-- NOVA PEM -->
+            <div class="col align-self-center form-user">
+               <button class="btn-filter" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    <div class="col-md-12 btn-filter__item">
+                        <h3><i class="fas fa-plus"></i> Nova PEM</h3>                     
+                        <div class=" btn-filter__arrow">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </button>
+                <div class="collapse in" id="collapseExample2">
+
+                    <div class="card card-body">
+                    <form class="form-inline" name="busca_form" id="busca_form" role="form" method="post" action="">
+                        <div class="form-row">
+                            <div  class="input-group">
+                            ETEC
+                            </div>
+                            <select class="form-control" id="" name="">
+                                <option value="">TODOS</option>
+                            </select>                  
+                        </div>
+                        <div class="form-row">
+                            <div  class="input-group">
+                            Cultura
+                            </div>
+                            <select class="form-control" id="" name="">
+                                <option value="">TODOS</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div  class="input-group">
+                            Produtor
+                            </div>
+                            <select class="form-control" id="" name="">
+                                <option value="">TODOS</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div  class="input-group">
+                                Data
+                            </div>
+                            <input class="form-control"type="" name="">
+                        </div>
+                                                 
+                    </form>     
+                </div>
+                <a href="" class="btn-search btn-search--size">Criar nova PEM</a>
+                </div>              
+            </div>
+            <!-- FIM NOVA PEM -->
+
+            <!-- BUSCAR PEM -->
+            <div class="col align-self-center form-user">
+               <button class="btn-filter" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    <div class="col-md-12 btn-filter__item">
+                        <h3><i class="fas fa-search"></i> Buscar PEM</h3>                     
+                        <div class=" btn-filter__arrow">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </button>
+                <div class="collapse" id="collapseExample1">
+                    <div class="card card-body">
+                        <form class="form-inline" name="busca_form" id="busca_form" role="form" method="post" action="">
+                            <div class="form-row">
+                                <div  class="input-group">
+                                PEM
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>
+                            </div>             
+                        </form>     
+                    </div>
+                    <a href="" class="btn-search"> <i class="fas fa-search"></i> Buscar</a>
+                </div>              
+            </div>
+            <!-- FIM BUSCAR PEM -->
+
+            <!-- FITROS MENU -->
+            <div class="col align-self-center form-user">
+                <button class="btn-filter" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="col-md-12 btn-filter__item">
+                        <h3><i class="fas fa-filter"></i> Filtros</h3>                     
+                        <div class=" btn-filter__arrow">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <form class="form-inline" name="busca_form" id="busca_form" role="form" method="post" action="">
+                            <div class="form-row">
+                                <div  class="input-group">
+                                ETEC
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>                  
+                            </div>
+                            <div class="form-row">
+                                <div  class="input-group">
+                                Cultura
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div  class="input-group">
+                                    Data
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div  class="input-group">
+                                Estado
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div  class="input-group">
+                                    Municipio
+                                </div>
+                                <select class="form-control" id="" name="">
+                                    <option value="">TODOS</option>
+                                </select>
+                            </div>                           
+                        </form>     
+                    </div>
+                    <a href="" class="btn-search"><i class="fas fa-search"></i> Buscar</a>
+                </div>              
+            </div>
+            <!-- FIM FITROS MENU -->
+
+            <!-- MENU CONFIGURAÇÕES -->
+            <div class="col-md-12 pem-options no-border">
+                <a href="">
+                    <div class="col-xs-1 pem-item no-padding">
+                        <div class="help">
+                            <i class="fas fa-question"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 pem-item">
+                        <b>Ajuda</b>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="col-xs-1 pem-item no-padding">
+                        <div class="contact">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 pem-item">
+                        <b>Contato</b>
+                    </div>  
+                </a>
+                 <a href="">
+                    <div class="col-xs-1 pem-item no-padding">
+                        <div class="logout">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 pem-item" style="padding-bottom: 20px">
+                        <b>Sair</b>
+                    </div>  
+                </a>
+            </div> 
+            <!-- FIM MENU CONFIGURAÇÕES -->
+        </div> 
+        <!-- FIM MENU LATERAL -->
+
+    <!-- NAVEGAÇÃO -->  
+    <section class="no-padding">
+        <div class="bg-silver container-fluid no-padding padding-bt p-relative">
+             <ul class="nav nav-tabs" id="myTab" role="tablist">
+         
+             <li class="col-lg-1 nav-item nav1">
+                 <a class="nav-link" id="dados-tab" data-toggle="tab" href="#dados" role="tab" aria-controls="dados" aria-selected="true">
+                     <i class="fas fa-list-ol"></i> <span class="hidden-sm-down">Dados Iniciais</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav2">
+                 <a class="nav-link" id="nutricaosqm-tab" data-toggle="tab" href="#nutricaosqm" role="tab" aria-controls="nutricaosqm" aria-selected="false">
+                     <i class="fas fa-list"></i> <span class="hidden-sm-down">Nutrição SQM VITAS</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav3">
+                 <a class="nav-link" id="nutricao-tab" data-toggle="tab" href="#nutricao" role="tab" aria-controls="nutricao" aria-selected="false">
+                     <i class="fas fa-list"></i> <span class="hidden-sm-down">Nutrição Convencional</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav4">
+                 <a class="nav-link" id="comparativonutri-tab" data-toggle="tab" href="#comparativonutri" role="tab" aria-controls="comparativonutri" aria-selected="false">
+                     <i class="fa fa-not-equal"></i> <span class="hidden-sm-down">Comparativo Nutricional</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav5">
+                 <a class="nav-link" id="comparativofontes-tab" data-toggle="tab" href="#comparativofontes" role="tab" aria-controls="comparativofontes" aria-selected="false">
+                     <i class="fa fa-not-equal"></i> <span class="hidden-sm-down">Comparativo das Fontes de N</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav6">
+                 <a class="nav-link" id="graficos-tab" data-toggle="tab" href="#graficos" role="tab" aria-controls="graficos" aria-selected="false">
+                     <i class="fa fa-chart-bar"></i> <span class="hidden-sm-down">Gráficos</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav7">
+                 <a class="nav-link" id="economias-tab" data-toggle="tab" href="#economias" role="tab" aria-controls="economias" aria-selected="false">
+                     <i class="fa fa-hand-holding-usd"></i> <span class="hidden-sm-down">Economias Indiretas</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav8">      
+                 <a class="nav-link" id="expectativa-tab" data-toggle="tab" href="#expectativa" role="tab" aria-controls="expectativa" aria-selected="false">
+                     <i class="fa fa-calculator"></i> <span class="hidden-sm-down">Expectativa Mínima</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav9">
+                 <a class="nav-link" id="impactosqualidade-tab" data-toggle="tab" href="#impactosqualidade" role="tab" aria-controls="impactosqualidade" aria-selected="false">
+                     <i class="fas fa-award"></i> <span class="hidden-sm-down">Impactos de Qualidade</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav10">
+                 <a class="nav-link" id="resumo-tab" data-toggle="tab" href="#resumo" role="tab" aria-controls="resumo" aria-selected="false">
+                     <i class="fa fa-chart-line"></i> <span class="hidden-sm-down">Resumo</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav11">
+                 <a class="nav-link" id="outros-tab" data-toggle="tab" href="#outros" role="tab" aria-controls="outros" aria-selected="false">
+                     <i class="fa fa-edit"></i> <span class="hidden-sm-down">Outros</span>
+                 </a>
+             </li>
+             <li class="col-lg-1 nav-item nav12">
+                 <a class="nav-link" id="volume-tab" data-toggle="tab" href="#volume" role="tab" aria-controls="volume" aria-selected="false">
+                     <i class="fa fa-shopping-cart"></i> <span class="hidden-sm-down">Volume de Compras</span>
+                 </a>
+             </li>
+             </ul>
+        </div>
+       
+        
+
+    </section>
+    <!-- FIM NAVEGAÇÃO -->
+   
+    <!-- TABELAS -->
+
+    <section class="p-relative tables-hide section-conf">
+        <div class="container-fluid tab-content" id="myTabContent">
+
+             <!-- TABELAS 1 -->
+            <div class="tab-pane fade " id="dados" role="tabpanel" aria-labelledby="dados-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fas fa-list-ol"></i><h3>Questionário geral e anotações diversas</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+               
+                <table class="table table-bordered table-responsive container">
+                    <tbody>
+                        <tr>
+                            <td class="table-gray txt-cultura">Cultura</td>
+                            <td class="table-gray txt-cultura">Tomate</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Área (ha)</td>
+                            <td class="text-nowrap">2,00 ha</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Produtuvidade Média</td>
+                            <td class="table-neutro ">260 Caixas</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Data(s) de plantio</td>
+                            <td class="table-neutro ">01/10/2018</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Data(s) de Colheita</td>
+                            <td class="table-neutro ">20/12/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Sistema de plantio</td>
+                            <td class="table-neutro ">Irrigado</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Sistema de Irrigação</td>
+                            <td class="table-neutro ">Gotejo</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Sistema de Injeção e forma de aplicação</td>
+                            <td class="table-neutro ">Fertirrigado</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Manejo Nutricional (fertilizantes utilizados)</td>
+                            <td class="table-neutro ">Blend</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Periodicidade da Fertilização</td>
+                            <td class="table-neutro ">3 vezes por semana</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Quais as cultivares, híbridos ou genótipos produzidos</td>
+                            <td class="table-neutro ">Tinto</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Características de Planta</td>
+                            <td class="table-neutro "></td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Qual(ais) problemas e ou desafios a serem melhorados</td>
+                            <td class="table-neutro ">frutos pequenos, tendo como consequência produtividade mediana
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Prováveis causas dos principais problemas e ou desafios a serem melhorados</td>
+                            <td class="table-neutro ">dose baixa, principalmente no pico de colheita, com baixo potássio e possíveis erros na pesagem dos fertilizantes quando colocados
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Dimensionamento do impacto econômico, perdas e ou operativo</td>
+                            <td class="table-neutro "></td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Oportunidades e potenciais de produtos e serviços (Hipóteses de Solução)</td>
+                            <td class="table-neutro ">oportunidade de aumento na dose e venda de blends
+                            </td>
+                            </tr>
+                        <tr>
+                            <td class="table-gray">Objetivos do trabalho</td>
+                            <td class="table-neutro ">aumento de peso e tamanho do fruto, consequentemente, aumento do número de caixas/ha
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Observações Complementares</td>
+                            <td class="table-neutro "></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <table class="table table--width">
+                        <!--Table head-->
+                        <thead>
+                            <tr>
+                            <td class="table-blue"><b>P: Qual a área total da propriedade (incluindo todas as culturas)?</b></td>
+                            </tr>
+                            <tr><td class="table-active">R: 100 ha</td>
+                            </tr>
+                            <tr><td class="table-blue"><b>P: Produz somente a cultura que está na PEM ou tem outras culturas a mais? Diga quais.</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Melão, Melancia e Milho</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Principais Características de Solo?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Franco Arenoso</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Principais Características de Água?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Água de poço com c.e em torno de 2</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Principais Características de Clima?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Quente e seco</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Qual é o mercado onde ele vende seus produtos (exportação, indústria, mercado nacional)?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Mercado Nacional</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Perfil/Descrição/Características gerais da região?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Clima quente e seco com chuvas concentradas entre março e abril</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Perfil/Descrição/Características gerais do Produtor?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: Produtor médio e bastante organizado</td>
+                            </tr>
+                            <tr>
+                            <td class="table-blue"><b>P: Qual a produtividade média na região?</b></td>
+                            </tr>
+                            <tr>
+                            <td class="table-active">R: 26 ton</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <!--Table body-->
+                    </table>
+                </div>
+            </div>
+            <!-- FIM TABELAS 1 -->
+
+            <!-- TABELAS  2-->
+            <div class="tab-pane fade" id="nutricaosqm" role="tabpanel" aria-labelledby="nutricasqm-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                         <i class="fas fa-list"></i><h3>Programa Nutricional SQM VITAS Brasil</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+                
+                <div class="container-fluid wrapper--page" id="table">
+
+                <section class="flexie-row header--table">  </section>
+                  
+                  <div class="flexie content--main">
+                    <div class="col-sticky flexie">
+                      <table>
+                        <thead>
+                          <tr align="center" class="default">
+                            <th colspan="7" class="align-middle table-gray"></th>
+                            
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Etapa Fenológica</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Época de Aplicação</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:7%">Produto</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:3%">N</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">P2O5</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">K2O</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Qtde</th>
+                          </tr> 
+                          <tr>
+                            <td>Base</td>
+                            <td>1</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>1ª Coberura </td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>2ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>3ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>4ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Após a diferenciação    </td>
+                            <td>5ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>6ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>7ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>8ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr><tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>9ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr><tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>10ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr><tr>
+                            <td>Total de Nutrientes </td>
+                            <td>X</td>
+                            <td>X</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Relação NPK </td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6">TOTAL</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="7">Relação NPK</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                           <tr align="center" class="default">
+                            <th colspan="20" class="align-middle table-gray" style="font-size:10px;text-align:center">Nutrientes Fornecidos Kg/ha</th>
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">N</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">P2O5</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">K2O</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">S</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Ca</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">CaO</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mg</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">MgO</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">B</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Cu<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Fe<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mn<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mo</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Zn<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Cl</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:6%">Preço do Produto</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:6%">Custo Nutricional</th>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>   
+                        </table>
+                    </div>
+                  </div>
+                  <small>* micro elementos que podem ser quelatados</small>
+                </div>
+            </div>
+            <!-- FIM TABELAS 2 -->
+
+            <!-- TABELAS  3 -->
+            <div class="tab-pane fade" id="nutricao" role="tabpanel" aria-labelledby="nutricao-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fas fa-list"></i><h3>Programa Nutricional Convencional</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                <div class="container-fluid wrapper--page" id="table">
+  
+    
+                <section class="flexie-row header--table"></section>
+                  
+                <div class="flexie content--main">
+                    <div class="col-sticky flexie">
+                      <table>
+                        <thead>
+                          <tr align="center" class="default">
+                            <th colspan="7" class="align-middle table-gray"></th>
+                            
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Etapa Fenológica</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Época de Aplicação</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Produto</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:3%">N</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:3%">P2O5</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:3%">K2O</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:3%">Qtde</th>
+                          </tr> 
+                          <tr>
+                            <td>Base</td>
+                            <td>1</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>1ª Coberura </td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>2ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>3ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>4ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Após a diferenciação    </td>
+                            <td>5ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>6ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>7ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>8ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr><tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>9ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr><tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>10ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>   
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>10ª Cobertura</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Total de Nutrientes </td>
+                            <td>X</td>
+                            <td>X</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>Relação NPK </td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                            <td>33</td>
+                            <td>44</td>
+                            <td>55</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="6">TOTAL</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="7">Relação NPK</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                           <tr align="center" class="default">
+                            <th colspan="20" class="align-middle table-gray" style="font-size:10px;text-align:center">Nutrientes Fornecidos Kg/ha</th>
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">N</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">P2O5</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">K2O</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">S</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Ca</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">CaO</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mg</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">MgO</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">B</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Cu<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Fe<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mn<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Mo</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Zn<i style="color:red">*</i></th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Cl</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Preço do Produto</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:2%">Custo Nutricional</th>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                          </tr>   
+                        </table>
+                    </div>
+                </div> 
+                <small>* micro elementos que podem ser quelatados</small>
+                </div>
+            </div>
+            <!-- FIM TABELAS 3 -->
+
+            <!-- TABELAS  4 -->
+            <div class="tab-pane fade" id="comparativonutri" role="tabpanel" aria-labelledby="comparativonutri-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fa fa-not-equal"></i><h3>Comparação Programas Nutricinais</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                <div class="container-fluid wrapper--page" id="table">
+
+                <section class="flexie-row header--table">  </section>
+                  
+                  <div class="flexie content--main">
+                    <div class="col-sticky col-sticky3 flexie">
+                      <table>
+                        <thead>
+                          <tr align="center" class="default">
+                            <th colspan="2" class="align-middle table-gray"></th>
+                            
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Etapa Fenológica</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Nutrição</th>
+                          </tr> 
+                          <tr>
+                            <td>Base</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>1ª Coberura </td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>2ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>3ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>4ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Após a diferenciação</td>
+                            <td>5ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>6ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>7ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>8ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>9ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>10ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>10ª Cobertura</td>
+                          </tr>
+                          <tr>
+                            <td>Total de Nutrientes </td>
+                            <td>X</td>
+                          </tr>
+                          <tr>
+                            <td>Relação NPK </td>
+                            <td>XXX</td>
+                          </tr>
+                          <tr>
+                            <td colspan="1">TOTAL</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">Relação NPK</td>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                           <tr align="center" class="default">
+                            <th colspan="15" class="align-middle table-gray" style="font-size:10px;text-align:center">Nutrientes Fornecidos Kg/ha</th>
+                            <th colspan="3" class="align-middle table-gray" style="font-size:10px;text-align:center">Relação NPK</th>
+                            <th colspan="2" class="align-middle" style="font-size:10px;text-align:center"></th>
+                          </tr>
+                          <tr>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">N</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">P2O5</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">K2O</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">S</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Ca</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">CaO</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mg</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">MgO</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">B</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Cu<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Fe<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mn<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Zn<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Cl</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">N</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">P2O5</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">K2O</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 5%">Quantidade Kg/ha</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 5%">Custo Nutricional</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr><tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr><tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr><tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>                            
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                          </tr>   
+                        </table>
+                    </div>
+                  </div>
+                  <small>* micro elementos que podem ser quelatados</small>
+                </div>
+                <br>
+               
+                <table style="font-size:10px" class="table table-sm table-bordered ">
+                    <tbody>
+                        <tr style="font-weight:bold">
+                        <td style="font-size: 10px; text-align:center;width: 25%;border:0px" class="table-inves"></td>
+                        <td style="font-size: 10px; text-align:center;width: 25%" class="table-green">SQM VITAS</td>
+                        <td style="font-size: 10px; text-align:center;width: 25%" class="table-gray">Convencional</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Nítrico NO3</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">43%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">24%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Amoniacal NH4</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">8%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">1%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Amídico NH2</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">49%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">75%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Total</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">100%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIM TABELAS 4 -->
+
+            <!-- TABELAS  5 -->
+            <div class="tab-pane fade" id="comparativofontes" role="tabpanel" aria-labelledby="comparativofontes-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-11">
+                        <i class="fa fa-not-equal"></i><h3>Comparativo da Distribuição e Proporção das Fontes de Nitrogênio</h3><br>
+                    </div>
+                    <div class="options-page col-md-1">
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>  
+
+
+                <div class="container-fluid wrapper--page" id="table">
+      
+                    <section class="flexie-row header--table"></section>
+                      
+                    <div class="flexie content--main">
+                        <div class="col-sticky col-sticky3 flexie">
+                          <table>
+                            <thead>
+                             
+                              <tr>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Etapa Fenológica</th>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Nutrição</th>
+                              </tr> 
+                              <tr>
+                            <td>Base</td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvolvimento Vegetativo  </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Após a diferenciação</td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Enchimento de Bulbo </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Total de Nutrientes </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td>Relação NPK </td>
+                            <td>01</td>
+                          </tr>
+                          <tr>
+                            <td colspan="1">TOTAL</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">Diferença</td>
+                          </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="col-scrollable flexie">
+                            <table>
+                              <tr>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:25%">NO3 - Nítrico (kg/ha) - (%)</th>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:25%">NH4 - Amoniacal (kg/ha) - (%)    </th>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:25%">NH2 - Amídico (kg/ha) - (%)  </th>
+                                <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:25%">N - Total</th>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>
+                              <tr>
+                                <td>00</td>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                              </tr>   
+                            </table>
+                        </div>
+                    </div> 
+                    <small>* micro elementos que podem ser quelatados</small>
+                </div>
+                <br>
+                <table style="font-size:10px;width:800px" class="table table-sm table-bordered table-responsive container">
+                    <tbody>
+                        <tr style="font-weight:bold">
+                        <td style="font-size: 10px; text-align:center;width: 25%;border:0px" class="table-inves"></td>
+                        <td style="font-size: 10px; text-align:center;width: 25%" class="table-green">SQM VITAS</td>
+                        <td style="font-size: 10px; text-align:center;width: 25%" class="table-gray">Convencional</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Nítrico NO3</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">43%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">24%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Amoniacal NH4</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">8%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">1%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Amídico NH2</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">49%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">75%</td>
+                        </tr>
+                        <tr>
+                        <td style="font-weight:bold" class="table-gray">Total</td>
+                        <td style="font-weight:bold;text-align:center" class="table-green">100%</td>
+                        <td style="font-weight:bold;text-align:center" class="table-gray">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIM TABELAS 5 -->
+
+            <!-- TABELAS  6 -->
+            <div class="tab-pane fade" id="graficos" role="tabpanel" aria-labelledby="graficos-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fa fa-chart-bar"></i><h3>Graficos do Comparativo da Distribuição e Proporção das Fontes de Nitrogênio</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                <div id="graficos1"></div>
+                <br><br><br>
+                <div class="container-fluid wrapper--page" id="table">
+
+                    <section class="flexie-row header--table">  </section>
+                  
+                  <div class="flexie content--main">
+                    <div class="col-sticky col-sticky3 flexie">
+                      <table>
+                        <thead>                          
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:100%"></th>
+                          </tr> 
+                          <tr>
+                            <td style="background-color: #7bc0f7;">K20</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #3b8ad9;">Nítrico (N03)</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #f18226;">Amoniacal (NH4)</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ffdb69;">Amídico (NH2)</td>
+                           </tr>
+                          <tr>
+                            <td style="background-color: #fff;">Relação N:K</td>
+                           </tr>
+                          <tr>
+                            <td></td>
+                           </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                          <tr>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Base</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Após a diferenciação</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                         
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                          </tr>
+                          
+                        <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                         
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <br><br><br>
+
+                <div id="graficos2"></div>
+
+                <div class="container-fluid wrapper--page" id="table">
+
+                <section class="flexie-row header--table">  </section>
+                  
+                  <div class="flexie content--main">
+                    <div class="col-sticky col-sticky3 flexie">
+                      <table>
+                        <thead>                          
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:100%"></th>
+                          </tr> 
+                          <tr>
+                            <td style="background-color: #7bc0f7;">K20</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #3b8ad9;">Nítrico (N03)</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #f18226;">Amoniacal (NH4)</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ffdb69;">Amídico (NH2)</td>
+                           </tr>
+                          <tr>
+                            <td style="background-color: #fff;">Relação N:K</td>
+                           </tr>
+                          <tr>
+                            <td></td>
+                           </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                          <tr>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Base</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Desenv. Vegetativo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Após a diferenciação</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Enchimento de Bulbo</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                         
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                          </tr>
+                          
+                        <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>                         
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          
+                        </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- FIM TABELAS 6 -->
+
+            <!-- TABELAS  7 -->
+            <div class="tab-pane fade" id="economias" role="tabpanel" aria-labelledby="economias-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fa fa-hand-holding-usd"></i><h3>Economias</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                <div class="container-fluid wrapper--page" id="table">
+      
+                    <section class="flexie-row header--table"></section>
+                      
+                    <table>
+                      <tr>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 35%">ITENS DE ECONOMIAS INDIRETAS SOBRE O CUSTO TOTAL DA RECOMENDAÇÃO DA SQM VITAS BRASIL</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Economia Indireta em R$/ha</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Economia Indireta em % sobre custo manejo nutricional</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Economia Indireta em Kg da lavoura</th>
+
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos custos de mão de obra</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos custos de água   </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos custos de energia elétrica   </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos custos provenientes de erro humano de mistura a campo e aplicação de doses e produtos incorretamente </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição do número de produtos diferentes a campo e da quantidade de produtos a serem descarregados e manipulados a campo e espaço de armazenagem </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos índices de furto de produto  </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos índices de perda de produto na calda de produto por utilizar produtos de alta solubilidade e compatibilidade </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Correção dos índices de acidez do solo  </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Outros 1</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Outros 2</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Outros 3</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>TOTAL</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                    </table>
+                </div>               
+            </div>
+            <!-- FIM TABELAS 7 -->
+
+            <!-- TABELAS  8 -->
+            <div class="tab-pane fade" id="expectativa" role="tabpanel" aria-labelledby="expectativa-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fa fa-calculator"></i><h3>Expectativa Mínima</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                <table class="table table-bordered table-responsive container">
+                    <tbody>
+                        <tr>
+                            <td class="table-gray txt-cultura">Cultura</td>
+                            <td class="table-gray txt-cultura">Tomate</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Plantas por ha</td>
+                            <td class="text-nowrap">2,00 ha</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Área total</td>
+                            <td class="table-neutro ">260 Caixas</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Área tratada</td>
+                            <td class="table-neutro ">01/10/2018</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Unidade de produção (sacos, caixas, kgs...)</td>
+                            <td class="table-neutro ">20/12/2017</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Produtividade Caixas 10 Kg /ha</td>
+                            <td class="table-neutro ">Irrigado</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Preço de venda da unidade da Cultura</td>
+                            <td class="table-neutro ">Gotejo</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Custo total de produção</td>
+                            <td class="table-neutro ">Fertirrigado</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Nome do responsável SQM VITAS BRASIL</td>
+                            <td class="table-neutro ">Blend</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Estado</td>
+                            <td class="table-neutro ">3 vezes por semana</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Município</td>
+                            <td class="table-neutro ">Tinto</td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Nome do Parceiro Comercial</td>
+                            <td class="table-neutro "></td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Data da proposição e análise</td>
+                            <td class="table-neutro ">frutos pequenos, tendo como consequência produtividade mediana
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray">Status</td>
+                            <td class="table-neutro ">dose baixa, principalmente no pico de colheita, com baixo potássio e possíveis erros na pesagem dos fertilizantes quando colocados
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div class="container-fluid wrapper--page" id="table">
+                            
+                    <table>
+                      <tr>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 20%">Item</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 10%">Recomendação SQM VITAS BRASIL</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 10%">Recomendação Convencional</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 10%">Diferença em valores / ha  </th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 10%">Diferença</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 10%">Diferenças em valores (Área total)</th>
+
+                      </tr>
+                      <tr>
+                        <td>Quantidade total de produto aplicado</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Custo de fertilização em R$/ha </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Custo de fertilização em Kg/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Economias indiretas em R$/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Economias indiretas em Kg/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Custo final (custo - economias indiretas) em R$/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>Custo final (custo - economias indiretas) em Kg/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>
+                      <tr>
+                        <td>% sobre o Custo total de produção</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                        <td>04</td>
+                        <td>05</td>
+                      </tr>                     
+                    </table>
+                </div>                  
+            </div>
+            <!-- FIM TABELAS 8 -->
+
+            <!-- TABELAS  9 -->
+            <div class="tab-pane fade" id="impactosqualidade" role="tabpanel" aria-labelledby="impactosqualidade-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fas fa-award"></i><h3>Impactos de Qualidade</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+                <div id="container"></div>
+                <div class="container-fluid wrapper--page" id="table" style="position: relative;top: 100px;">
+             
+                <div class="flexie content--main">
+                    <div class="col-sticky col-sticky3 flexie">
+                      <table>
+                        <thead>
+                          <tr align="center" class="default">
+                            <th colspan="2" class="align-middle table-gray"></th>
+                            
+                          </tr>
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:100%">Item</th>
+                          </tr> 
+                          <tr>
+                            <td>Produtividade em Kg/ha</td>
+                          </tr>
+                          <tr>
+                            <td>Custo fertilização  </td>
+                          </tr>
+                          <tr>
+                            <td>% produto classificado Categoria A</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                          </tr>
+                          <tr>
+                            <td>Preço do Produto Categoria A</td>
+                          </tr>
+                          <tr>
+                            <td>Preço médio do produto obtido por qualidade </td>
+                          </tr>
+                          <tr>
+                            <td>Receita Bruta</td>
+                          </tr>
+                          <tr>
+                            <td>"Receita Líquida" (Receita bruta menos somente o custo nutricional) </td>
+                          </tr>  
+                          <tr>
+                            <td></td>
+                          </tr>                         
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                           <tr align="center" class="default">
+                            <th colspan="15" class="align-middle table-gray" style="font-size:10px;text-align:center">IMPACTO DE QUALIDADE: por diferenças na classificação de qualidade e preços de produção obtida</th>
+                          </tr>
+                          <tr>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Recomendação SQM VITAS Brasil</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Recomendação Convencional</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Diferença</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Diferença %</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Diferenças em valores Totais (Área Total)</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                          </tr>
+                            
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <section class="flexie-row header--table">  </section>
+            </div>
+            <!-- FIM TABELAS 9 -->
+
+            <!-- TABELAS  10 -->
+            <div class="tab-pane fade" id="resumo" role="tabpanel" aria-labelledby="resumo-tab">     
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                         <i class="fa fa-chart-line"></i><h3>Resumo</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+                
+                <div class="container-fluid wrapper--page" id="table">
+      
+                    <section class="flexie-row header--table"></section>
+                      
+                    <table>
+                      <tr>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 40%">Item</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 30%">Recomendação SQM VITAS Brasil</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 30%">Recomendação Convencional</th>
+                      </tr>
+                      <tr>
+                        <td>Custo nutricional final</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>Produtividade em Kg/ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>Preço médio de produto obtido por qualidade</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>Receita Bruta</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>"Receita Líquida" (Receita bruta menos somente o custo nutricial)</td>
+                        <td>01</td>
+                        <td>02</td>     
+                      </tr>
+                      <tr>
+                        <td>Diferença de Receita Líquida /ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>Diferença de Receita Líquida /ha</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr>
+                      <tr>
+                        <td>Diferença de Receita Líquida /ha em %</td>
+                        <td>01</td>
+                        <td>02</td>
+                      </tr> 
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>                       
+                    </table>
+
+                </div> 
+                <br><br><br>
+
+                <div id="graficos4"></div>
+                <div id="graficos5"></div>
+                <div id="graficos6"></div>
+                <div id="graficos7"></div>
+            </div>
+            <!-- FIM TABELAS 10 -->
+
+            <!-- TABELAS  11 -->
+            <div class="tab-pane fade" id="outros" role="tabpanel" aria-labelledby="outros-tab">
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                        <i class="fa fa-edit"></i><h3>Balanço Nutricional Utilizado pelo Produtor - Produto Outros</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-file-alt"></i></a>
+                        <a href=""><i class="fas fa-print"></i></a>
+                        <a href=""><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="container-fluid wrapper--page" id="table">
+
+                <section class="flexie-row header--table">  </section>
+                  
+                  <div class="flexie content--main">
+                    <div class="col-sticky col-sticky3 flexie">
+                      <table>
+                        <thead>
+                          
+                          <tr>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Nome</th>
+                            <th class="table-gray align-middle" style="font-size:10px; text-align:center;width:8%">Marca/Fornecedor</th>
+                          </tr> 
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>11</td>
+                           </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                           </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <div class="col-scrollable flexie">
+                        <table>
+                          <tr>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">N Total</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">NO3</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">NH4 </td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">NH2</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">P2O5</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">K2O</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">S</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Ca</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">CaO</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mg</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">MgO</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">B</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Cu<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Fe<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mn<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Mo</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Zn<i style="color:red">*</i></td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 3%">Cl</td>
+                            <th class="table-gray" style="font-size: 10px; text-align:center;width: 5%">Edição</td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          
+                        <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>                            
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                            <td>04</td>
+                            <td>05</td>
+                            <td>06</td>
+                            <td>07</td>
+                            <td>08</td>
+                            <td>09</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td><button id="edit" value="" style="font-size:10px" class="" onclick="edit_outros(1)"><i class="fa fa-edit"></i></button></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          
+                        </table>
+                    </div>
+                  </div>
+                  <small>* micro elementos que podem ser quelatados</small>
+                </div>
+            </div>
+            <!-- FIM TABELAS 11 -->
+
+            <!-- TABELAS  12 -->
+            <div class="tab-pane fade" id="volume" role="tabpanel" aria-labelledby="volume-tab">
+                
+                <div class="col-md-12 table-options">
+                    <div class="table-options col-md-10">
+                         <i class="fa fa-shopping-cart"></i><h3>Volume de Compras</h3><br>
+                    </div>
+                    <div class="options-page col-md-2">
+                        <a href=""><i class="fas fa-print"></i></a>
+                    </div>
+                </div>
+
+                 <div class="container-fluid wrapper--page" id="table">
+      
+                    <section class="flexie-row header--table"></section>
+                      
+                    <table>
+                      <tr>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 35%">Produto</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Dose Total </th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Total/ha</th>
+                        <th class="table-gray align-middle" style="font-size:10px; text-align:center;width: 21%">Volume Total de Compra</th>
+
+                      </tr>
+                      <tr>
+                        <td>Dripsol Magnum Flex Melão Inicial (16.21.13)</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Nitrato de calcio</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Dripsol SOP K+ (00.00.51,5) </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Dripsol Magnum Flex Melão Florada (12.18.18) </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Ureia</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Diminuição dos índices de furto de produto  </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Dripsol Magnum Flex Melão Fruto (16.8,5.25) </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                      <tr>
+                        <td>Dripsol NKS (KNO3)  </td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>                     
+                      <tr>
+                        <td>TOTAL</td>
+                        <td>01</td>
+                        <td>02</td>
+                        <td>03</td>
+                      </tr>
+                    </table>
+                </div>             
+            </div>
+            <!-- FIM TABELAS 12 -->
+
+        </div>
+    </section>
+
+    <!-- FIM TABELAS -->
+
+    <footer>
+        <span> SQM VITAS Brasil © 2018 - Todos os direitos reservados</span>
+    </footer>
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/all.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            initSlider();
+        });
+    </script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        header: ['#', 'Recomendação SQM VITAS Brasil', 'Recomendação Convencional'],
+        rows: [
+            ['% Tipo 7', 6814, 3054],
+            ['% Tipo 6', 7012, 5067],
+            ['% Tipo 5', 8814, 9054],
+            ['% Tipo 4', 8814, 9054],
+            ['% Tipo 3', 8814, 9054],
+            ['% Tipo 2', 8814, 9054],
+            ['% Categoria G', 8814, 9054],
+            ['% Categoria H', 8814, 9054],
+            ['% Categoria Descarte', 8814, 9054]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('{%Value}{groupsSeparator:}%');
+
+    // set titles for Y-axis
+    chart.yAxis().title('Classificação de Produtos por Qualidade');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('{%Value}{groupsSeparator:}%');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('container');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        title: 'TRATAMENTO SQM VITAS',
+        header: ['#', 'k20', 'Nítrico (N03)', 'Amoniacal (NH4)', 'Amídico (NH2)', 'Relação N:k' ],
+        rows: [
+            ['1', 400, 300, 400, 300],
+            ['2', 201, 567, 400, 300],
+            ['3', 555, 444, 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('{%Value}{groupsSeparator:} kg/ha');
+
+    // set titles for Y-axis
+    chart.yAxis().title('Kg/ha');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('{%Value}{groupsSeparator:}');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos1');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        title: 'TRATAMENTO CONVENCIONAL',
+        header: ['#', 'k20', 'Nítrico (N03)', 'Amoniacal (NH4)', 'Amídico (NH2)', 'Relação N:k' ],
+        rows: [
+            ['1', 400, 300, 400, 300],
+            ['2', 201, 567, 400, 300],
+            ['3', 555, 444, 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('{%Value}{groupsSeparator:} kg/ha');
+
+    // set titles for Y-axis
+    chart.yAxis().title('Kg/ha');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('{%Value}{groupsSeparator:}');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos2');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        title: 'Produtividade em unidades de produção: Caixas 10 Kg/ha',
+        header: ['#', 'Recomendação SQM VITAS Brasil', 'Recomendação Convencional' ],
+        rows: [
+            ['Produtividades rm Caixas 10 Kg/ha', 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('{%Value}{groupsSeparator:} /ha');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('{%Value}{groupsSeparator:} /ha');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos4');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        title: 'Receita Bruta',
+        header: ['#', 'Recomendação SQM VITAS Brasil', 'Recomendação Convencional' ],
+        rows: [
+            ['Receita Bruta', 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('R${%Value}{groupsSeparator:}');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('R${%Value}{groupsSeparator:}');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos5');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        title: '"Receita Líquida" (Receita bruta menos somente o custo nutricional)',
+        header: ['#', 'Recomendação SQM VITAS Brasil', 'Recomendação Convencional' ],
+        rows: [
+            ['Receita Líquida', 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('R${%Value}{groupsSeparator:}');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('R${%Value}{groupsSeparator:}');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos6');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+<script type="text/javascript">anychart.onDocumentReady(function () {
+    // create data set on our data
+    chartData = {
+        header: ['#', 'Recomendação SQM VITAS Brasil', 'Recomendação Convencional' ],
+        rows: [
+            ['Receita Líquida', 400, 300],
+            ['Receita Bruta', 400, 300]
+        ]
+    };
+
+    // create column chart
+    var chart = anychart.column();
+
+    // set chart data
+    chart.data(chartData);
+
+    // turn on chart animation
+    chart.animation(true);
+
+    chart.yAxis().labels().format('R${%Value}{groupsSeparator:}');
+
+    chart.labels()
+            .enabled(true)
+            .position('center-top')
+            .anchor('center-bottom')
+            .format('R${%Value}{groupsSeparator:}');
+    chart.hovered().labels(false);
+
+    // turn on legend and tune it
+    chart.legend()
+            .enabled(true)
+            .fontSize(13)
+            .padding([0, 0, 20, 0]);
+
+    // interactivity settings and tooltip position
+    chart.interactivity().hoverMode('single');
+
+    chart.tooltip()
+            .positionMode('point')
+            .position('center-top')
+            .anchor('center-bottom')
+            .offsetX(0)
+            .offsetY(5)
+            .titleFormat('{%X}')
+            .format('{%SeriesName} : {%Value}{groupsSeparator:}%');
+
+    // set container id for the chart
+    chart.container('graficos7');
+
+    // initiate chart drawing
+    chart.draw();
+});</script>
+
+</body>
+
+</html>
